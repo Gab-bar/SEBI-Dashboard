@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 70 95 255;
+  --surface-bg: 246 247 251;
+  --txt-primary: 23 25 35;
+  --txt-secondary: 100 105 125;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: rgb(var(--surface-bg));
+  color: rgb(var(--txt-primary));
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  /* ── Glass surfaces ─────────────────────── */
+  .glass-card {
+    @apply bg-surface-card backdrop-blur-glass rounded-xl shadow-glass border border-white/40 p-6;
+  }
+
+  .glass-sidebar {
+    @apply bg-white/80 backdrop-blur-glass shadow-glass border-r border-white/50;
+  }
+
+  .glass-topbar {
+    @apply bg-white/70 backdrop-blur-glass shadow-glass border-b border-white/40;
+  }
+
+  .glass-panel {
+    @apply bg-surface-panel backdrop-blur-glass rounded-lg shadow-glass border border-white/30 p-5;
+  }
+
+  /* ── Neumorphic controls ────────────────── */
+  .neu-button {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium
+           shadow-neu-raised transition-all duration-base ease-ui
+           hover:shadow-card-hover hover:-translate-y-0.5
+           active:shadow-neu-pressed active:translate-y-0;
+  }
+
+  .neu-button-primary {
+    @apply neu-button bg-primary text-white hover:bg-primary-hover;
+  }
+
+  .neu-button-secondary {
+    @apply neu-button bg-white text-txt-primary border border-primary/10;
+  }
+
+  .neu-input {
+    @apply w-full px-4 py-2.5 rounded-xl text-sm bg-white/70
+           border border-primary/[0.08] shadow-neu-subtle
+           placeholder:text-txt-muted
+           focus:outline-none focus:ring-2 focus:ring-primary-ring focus:border-primary/20
+           transition-all duration-fast ease-ui;
+  }
+
+  .neu-select {
+    @apply px-4 py-2.5 rounded-xl text-sm bg-white/70
+           border border-primary/[0.08] shadow-neu-subtle
+           text-txt-primary
+           focus:outline-none focus:ring-2 focus:ring-primary-ring focus:border-primary/20
+           transition-all duration-fast ease-ui appearance-none cursor-pointer;
+  }
+
+  /* ── Badges ─────────────────────────────── */
+  .badge-critical {
+    @apply px-3 py-1 rounded-full text-xs font-semibold bg-critical-soft text-critical;
+  }
+
+  .badge-high {
+    @apply px-3 py-1 rounded-full text-xs font-semibold bg-warning-soft text-amber-700;
+  }
+
+  .badge-medium {
+    @apply px-3 py-1 rounded-full text-xs font-semibold bg-amber-50 text-amber-600;
+  }
+
+  .badge-low {
+    @apply px-3 py-1 rounded-full text-xs font-semibold bg-surface-bg text-txt-secondary;
+  }
+
+  .badge-info {
+    @apply px-3 py-1 rounded-full text-xs font-semibold bg-primary-soft text-primary;
+  }
+
+  .badge-neutral {
+    @apply px-3 py-1 rounded-full text-xs font-semibold bg-surface-bg text-txt-secondary;
+  }
+
+  .badge-in-progress {
+    @apply px-3 py-1 rounded-full text-xs font-semibold bg-primary-soft text-primary;
+  }
+
+  .badge-completed {
+    @apply px-3 py-1 rounded-full text-xs font-semibold bg-success-soft text-success;
+  }
+
+  .badge-pending {
+    @apply px-3 py-1 rounded-full text-xs font-semibold bg-warning-soft text-amber-700;
+  }
+
+  /* ── Progress bars ──────────────────────── */
+  .progress-track {
+    @apply w-full bg-primary/[0.08] rounded-full h-2 overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-2 rounded-full bg-primary animate-progress-fill;
+  }
+
+  .progress-fill-success {
+    @apply h-2 rounded-full bg-success animate-progress-fill;
+  }
+
+  .progress-fill-warning {
+    @apply h-2 rounded-full bg-warning animate-progress-fill;
+  }
+
+  .progress-fill-critical {
+    @apply h-2 rounded-full bg-critical animate-progress-fill;
+  }
+
+  /* ── Tab bar ────────────────────────────── */
+  .tab-bar {
+    @apply flex gap-1 p-1.5 bg-primary/[0.05] rounded-xl;
+  }
+
+  .tab-item {
+    @apply px-4 py-2 text-sm font-medium rounded-lg text-txt-secondary
+           transition-all duration-fast ease-ui cursor-pointer
+           hover:text-txt-primary hover:bg-white/50;
+  }
+
+  .tab-item-active {
+    @apply px-4 py-2 text-sm font-medium rounded-lg text-primary bg-white
+           shadow-neu-subtle transition-all duration-fast ease-ui cursor-pointer;
+  }
+
+  /* ── Table ──────────────────────────────── */
+  .table-header {
+    @apply bg-primary/[0.03] text-txt-secondary text-xs font-semibold uppercase tracking-wider;
+  }
+
+  .table-row {
+    @apply border-b border-primary/[0.06] transition-colors duration-fast hover:bg-primary/[0.02];
+  }
+
+  /* ── Layout helpers ─────────────────────── */
+  .stat-card {
+    @apply glass-card hover:shadow-card-hover hover:-translate-y-0.5
+           transition-all duration-base ease-ui animate-fade-in;
+  }
+
+  .section-header-title {
+    @apply text-3xl font-semibold text-txt-primary;
+  }
+
+  .section-header-subtitle {
+    @apply text-txt-secondary mt-1;
+  }
+
+  .sidebar-item {
+    @apply flex items-center gap-3 px-6 py-3 text-sm text-txt-secondary
+           transition-all duration-fast ease-ui
+           hover:bg-primary/[0.05] hover:text-txt-primary;
+  }
+
+  .sidebar-item-active {
+    @apply flex items-center gap-3 px-6 py-3 text-sm font-medium text-primary
+           bg-primary-soft
+           shadow-[inset_3px_0_0_rgb(70_95_255)]
+           transition-all duration-fast ease-ui;
+  }
+
+  /* ── Animation stagger ──────────────────── */
+  .animate-card-1 { animation-delay: 0ms; }
+  .animate-card-2 { animation-delay: 80ms; }
+  .animate-card-3 { animation-delay: 160ms; }
+  .animate-card-4 { animation-delay: 240ms; }
+  .animate-card-5 { animation-delay: 320ms; }
+}
