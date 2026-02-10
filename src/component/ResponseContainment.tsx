@@ -73,7 +73,7 @@ const IncidentResponseTimeline = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white p-8">
+    <div className="min-h-screen bg-white p-3 sm:p-4 lg:p-6 xl:p-8">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="mb-8">

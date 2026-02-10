@@ -77,7 +77,7 @@ const AssessmentReports = () => {
     }
   ];
   return (
-    <div className="min-h-screen bg-surface-bg p-8">
+    <div className="min-h-screen bg-surface-bg p-3 sm:p-4 lg:p-6 xl:p-8">
       <div className="max-w-[1600px] mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
@@ -90,7 +90,8 @@ const AssessmentReports = () => {
 
         {/* Table */}
         <div className="glass-panel border border-primary/[0.06] overflow-hidden">
-          <table className="w-full">
+          <div className="overflow-x-auto">
+          <table className="w-full min-w-[640px]">
             <thead className="bg-surface-bg border-b border-primary/[0.06]">
               <tr>
                 <th className="text-left py-3 px-6 text-xs font-medium text-txt-secondary">Report</th>
@@ -169,6 +170,7 @@ const AssessmentReports = () => {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       </div>
     </div>

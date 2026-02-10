@@ -61,7 +61,7 @@ const AnnualReportsDashboard = () => {
     }
   ];
   return (
-    <div className="min-h-screen bg-surface-bg p-6">
+    <div className="min-h-screen bg-surface-bg p-3 sm:p-4 lg:p-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
@@ -105,7 +105,7 @@ const AnnualReportsDashboard = () => {
               </div>
 
               {/* Report Stats */}
-              <div className="grid grid-cols-4 gap-8 mb-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-6">
                 <div className="text-center">
                   <div className="section-header-title">{report.pages}</div>
                   <div className="text-sm text-txt-muted">Pages</div>

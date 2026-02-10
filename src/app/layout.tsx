@@ -22,7 +22,7 @@ export default function RootLayout({
         <div className="flex min-h-screen bg-surface-bg">
           <Sidebar />
 
-          <div className="flex-1 overflow-y-auto ml-64 tablet:ml-0 transition-[margin] duration-base ease-ui">
+          <div className="flex-1 overflow-y-auto ml-64 tablet:ml-0 tablet:pt-14 transition-[margin] duration-base ease-ui">
             <TopBar />
             {children}
           </div>

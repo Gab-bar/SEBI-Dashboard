@@ -114,7 +114,7 @@ const AuditorVendorDirectory = () => {
   };
 
   return (
-    <div className="min-h-screen bg-surface-bg p-8">
+    <div className="min-h-screen bg-surface-bg p-3 sm:p-4 lg:p-6 xl:p-8">
       <div className="max-w-[1600px] mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
@@ -203,7 +203,7 @@ const AuditorVendorDirectory = () => {
               </div>
 
               {/* Metrics */}
-              <div className="grid grid-cols-4 gap-8 py-4 border-t border-b border-primary/[0.06] my-4">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 py-4 border-t border-b border-primary/[0.06] my-4">
                 <div className="text-center">
                   <div className={`text-2xl font-semibold ${getMetricColor(vendor.onTimeDelivery)}`}>
                     {vendor.onTimeDelivery}%

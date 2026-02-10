@@ -15,6 +15,7 @@ function Sidebar() {
 
   const pathname = usePathname();
   const [collapsed, setCollapsed] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const [menuItems, setMenuItems] = useState<menuItem[]>([
   { icon: <BarChart2 width={16} height={16}/>, label: 'Dashboard', active: pathname === "/", link: "/", id: 1 },
@@ -37,27 +38,41 @@ function Sidebar() {
     setMenuItems(state => state.map(el => ({ ...el, active: item.id === el.id })));
   }
 
+  function handleNavClick(item: menuItem) {
+    setActiveStatus(item);
+    setMobileOpen(false);
+  }
+
   return (
     <>
       {/* Mobile toggle */}
       <button
-        onClick={() => setCollapsed(!collapsed)}
-        className="fixed top-4 left-4 z-50 hidden tablet:flex items-center justify-center w-10 h-10 rounded-xl bg-primary text-white shadow-neu-raised"
-        aria-label={collapsed ? 'Open menu' : 'Close menu'}
+        onClick={() => setMobileOpen(!mobileOpen)}
+        className="fixed top-3 left-3 z-50 hidden tablet:flex items-center justify-center w-10 h-10 rounded-xl bg-primary text-white shadow-neu-raised"
+        aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
       >
-        {collapsed ? <Menu size={18} /> : <X size={18} />}
+        {mobileOpen ? <X size={18} /> : <Menu size={18} />}
       </button>
+
+      {/* Mobile overlay backdrop */}
+      {mobileOpen && (
+        <div
+          className="fixed inset-0 z-30 bg-black/40 hidden tablet:block"
+          onClick={() => setMobileOpen(false)}
+          aria-hidden="true"
+        />
+      )}
 
       <div
         className={`glass-sidebar h-screen flex flex-col fixed z-40 transition-all duration-base ease-ui
           ${collapsed ? 'laptop:w-[72px]' : 'w-64'}
-          tablet:${collapsed ? '-translate-x-full' : 'translate-x-0'}
+          ${mobileOpen ? 'tablet:translate-x-0' : 'tablet:-translate-x-full'}
           tablet:w-64
         `}
         role="navigation"
         aria-label="Main navigation"
       >
-        <div className="p-6 border-b border-primary/[0.06]">
+        <div className="p-4 sm:p-6 border-b border-primary/[0.06]">
           <div className="flex items-center gap-2">
             <div className="w-14 h-8 bg-primary rounded-md flex items-center justify-center text-white text-lg flex-shrink-0">
                <Shield size={19} strokeWidth={1.7} color="#fff" />
@@ -85,7 +100,7 @@ function Sidebar() {
             <a
               key={index}
               href={item.link ? item.link : "#"}
-              onClick={() => setActiveStatus(item)}
+              onClick={() => handleNavClick(item)}
               className={item.active ? 'sidebar-item-active' : 'sidebar-item'}
               aria-current={item.active ? 'page' : undefined}
               title={collapsed ? item.label : undefined}

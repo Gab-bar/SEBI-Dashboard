@@ -88,7 +88,7 @@ const AssessmentSchedule = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-surface-bg p-8">
+    <div className="min-h-screen bg-surface-bg p-3 sm:p-4 lg:p-6 xl:p-8">
       <div className="max-w-[1600px] mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">

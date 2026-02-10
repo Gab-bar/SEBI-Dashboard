@@ -103,7 +103,7 @@ const ConfigFilesEvidence = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white p-8">
+    <div className="min-h-screen bg-white p-3 sm:p-4 lg:p-6 xl:p-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
@@ -116,7 +116,8 @@ const ConfigFilesEvidence = () => {
 
         {/* Table */}
         <div className="bg-white border border-primary/[0.06] rounded-lg overflow-hidden">
-          <table className="w-full">
+          <div className="overflow-x-auto">
+          <table className="w-full min-w-[640px]">
             <thead className="bg-surface-bg border-b border-primary/[0.06]">
               <tr>
                 <th className="text-left py-3 px-6 text-sm font-medium text-txt-secondary">System</th>
@@ -177,6 +178,7 @@ const ConfigFilesEvidence = () => {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       </div>
     </div>

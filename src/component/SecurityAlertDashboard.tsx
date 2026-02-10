@@ -51,21 +51,21 @@ const SecurityAlertDashboard: React.FC = () => {
       <div className="lg:col-span-2 space-y-6">
         <div className="stat-card">
           <h2 className="text-2xl font-bold text-txt-primary mb-6">Today's Alert Summary</h2>
-          <div className="grid grid-cols-4 gap-4">
-            <div className="bg-critical-soft rounded-lg p-6 text-center">
-              <div className="text-4xl font-bold text-critical mb-1">{alertSummary.critical}</div>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+            <div className="bg-critical-soft rounded-lg p-3 sm:p-4 lg:p-6 text-center">
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-critical mb-1">{alertSummary.critical}</div>
               <div className="text-sm text-txt-secondary">Critical</div>
             </div>
-            <div className="text-center p-6">
-              <div className="text-4xl font-bold text-txt-muted mb-1">{alertSummary.high}</div>
+            <div className="text-center p-3 sm:p-4 lg:p-6">
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-txt-muted mb-1">{alertSummary.high}</div>
               <div className="text-sm text-txt-secondary">High</div>
             </div>
-            <div className="text-center p-6">
-              <div className="text-4xl font-bold text-txt-primary mb-1">{alertSummary.medium}</div>
+            <div className="text-center p-3 sm:p-4 lg:p-6">
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-txt-primary mb-1">{alertSummary.medium}</div>
               <div className="text-sm text-txt-secondary">Medium</div>
             </div>
-            <div className="text-center p-6">
-              <div className="text-4xl font-bold text-txt-primary mb-1">{alertSummary.low}</div>
+            <div className="text-center p-3 sm:p-4 lg:p-6">
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-txt-primary mb-1">{alertSummary.low}</div>
               <div className="text-sm text-txt-secondary">Low</div>
             </div>
           </div>
@@ -77,7 +77,7 @@ const SecurityAlertDashboard: React.FC = () => {
             {topAlertTypes.map((alert, idx) => (
               <div
                 key={idx}
-                className="flex items-center justify-between p-4 border border-primary/[0.06] rounded-lg hover:bg-surface-bg transition-colors"
+                className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-4 border border-primary/[0.06] rounded-lg hover:bg-surface-bg transition-colors"
               >
                 <div>
                   <h3 className="font-semibold text-txt-primary">{alert.name}</h3>
@@ -100,7 +100,7 @@ const SecurityAlertDashboard: React.FC = () => {
           <div className="space-y-6">
             {weeklyTrend.map((item, idx) => (
               <div key={idx}>
-                <div className="flex items-center justify-between mb-2">
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-4 mb-2">
                   <span className="font-medium text-txt-primary">{item.day}</span>
                   <span className="font-bold text-txt-primary">{item.total}</span>
                 </div>

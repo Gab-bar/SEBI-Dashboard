@@ -189,7 +189,7 @@ const SecurityAuditTracker = () => {
               </div>
 
               {/* Metrics Grid */}
-              <div className="grid grid-cols-4 gap-6 mb-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 mb-6">
                 <div className="text-center p-4 rounded-lg" style={{ backgroundColor: '#ffe5e5' }}>
                   <div className="flex items-center justify-center mb-2">
                     <AlertCircle className="text-critical" size={20} />

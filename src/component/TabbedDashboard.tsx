@@ -224,9 +224,9 @@ const TabbedDashboard: React.FC<{ tabs: TabType[] }> = ({ tabs }) => {
   };
 
   return (
-    <div className="min-h-screen bg-surface-bg p-6">
+    <div className="min-h-screen bg-surface-bg p-3 sm:p-4 lg:p-6">
       <div className="max-w-7xl mx-auto">
-        <div className="tab-bar mb-6 overflow-x-auto" role="tablist">
+        <div className="tab-bar mb-4 sm:mb-6" role="tablist">
           {tabs.map((tab) => (
             <button
               key={tab}

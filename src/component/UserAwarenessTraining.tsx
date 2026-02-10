@@ -46,15 +46,15 @@ function UserAwarenessTraining() {
     ];
 
   return (
-        <div className="bg-surface-bg p-6">
+        <div className="bg-surface-bg p-3 sm:p-4 lg:p-6">
         <div className="max-w-7xl mx-auto">
             {/* Header Section */}
-            <div className="flex items-start justify-between mb-8">
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4 sm:mb-6 lg:mb-8">
             <div>
                 <h1 className="section-header-title mb-2">User Awareness & Training</h1>
                 <p className="text-txt-secondary">Manage employee cybersecurity training, awareness, and simulations</p>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                 <button className="neu-button-secondary text-sm">
                 <Download className="w-4 h-4" />
                 Upload Policy
@@ -71,7 +71,7 @@ function UserAwarenessTraining() {
             </div>
 
             {/* Stats Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             {stats.map((stat, index) => (
                 <div
                     key={index}

@@ -76,7 +76,7 @@ const AlertBreakdownDashboard = () => {
   const maxTotal = Math.max(...weeklyTrend.map(d => d.total));
 
   return (
-    <div className="min-h-screen bg-surface-bg p-8">
+    <div className="min-h-screen bg-surface-bg p-3 sm:p-4 lg:p-6 xl:p-8">
       <div className="max-w-[1600px] mx-auto space-y-6">
         {/* Today's Alert Breakdown */}
         <div className="glass-panel p-6">

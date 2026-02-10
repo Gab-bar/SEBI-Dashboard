@@ -128,7 +128,7 @@ const SEBIReportingTracker = () => {
   };
 
   return (
-    <div className="min-h-screen bg-surface-bg p-6">
+    <div className="min-h-screen bg-surface-bg p-3 sm:p-4 lg:p-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-between mb-8">
           <h1 className="section-header-title">SEBI Reporting Tracker</h1>

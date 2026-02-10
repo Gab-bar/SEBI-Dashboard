@@ -173,7 +173,7 @@ const VendorCyberRiskScoring = () => {
         {/* Risk Score Calculation Info */}
         <div className="bg-surface-bg rounded-lg border border-primary/[0.06] p-5 mb-8">
           <h3 className="text-sm font-semibold text-txt-primary mb-3">Risk Score Calculation</h3>
-          <div className="grid grid-cols-4 gap-4 text-xs">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-xs">
             <div>
               <span className="text-txt-muted">Low Risk:</span>
               <span className="ml-2 font-medium text-txt-primary">80-100</span>

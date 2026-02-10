@@ -35,7 +35,7 @@ export default function StatsCards() {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 mb-4 sm:mb-6 lg:mb-8">
       {stats.map((stat, index) => (
         <div key={index} className={`stat-card animate-card-${index + 1}`}>
           <h3 className="text-xs font-medium text-txt-secondary mb-4">{stat.title}</h3>

@@ -89,7 +89,7 @@ const CriticalAlertsTimeline = () => {
     }
   ];
   return (
-    <div className="min-h-screen bg-surface-bg p-8">
+    <div className="min-h-screen bg-surface-bg p-3 sm:p-4 lg:p-6 xl:p-8">
       <div className="max-w-[1600px] mx-auto">
         {/* Header */}
         <h1 className="text-2xl font-semibold text-txt-primary mb-6">Critical Alerts Timeline</h1>

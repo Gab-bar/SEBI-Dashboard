@@ -146,7 +146,8 @@ const CybersecurityPolicyRepository = () => {
       {/* Table */}
       <div className="max-w-7xl mx-auto px-6 py-6">
         <div className="glass-panel border border-primary/[0.06] overflow-hidden">
-          <table className="w-full">
+          <div className="overflow-x-auto">
+          <table className="w-full min-w-[640px]">
             <thead className="bg-surface-bg border-b border-primary/[0.06]">
               <tr>
                 <th className="px-6 py-3 text-left text-xs font-medium text-txt-muted uppercase tracking-wider">
@@ -222,6 +223,7 @@ const CybersecurityPolicyRepository = () => {
               ))}
             </tbody>
           </table>
+          </div>
         </div>
       </div>
     </div>

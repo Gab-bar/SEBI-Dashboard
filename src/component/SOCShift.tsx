@@ -110,7 +110,7 @@ const SOCShiftLogs = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-surface-bg p-8">
+    <div className="min-h-screen bg-surface-bg p-3 sm:p-4 lg:p-6 xl:p-8">
       <div className="max-w-[1600px] mx-auto">
         {/* Header */}
         <h1 className="text-2xl font-semibold text-txt-primary mb-6">SOC Shift Logs</h1>
@@ -130,7 +130,7 @@ const SOCShiftLogs = () => {
               </div>
 
               {/* Alert Stats */}
-              <div className="grid grid-cols-4 gap-6 mb-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 mb-6">
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-2 mb-1">
                     <div className="text-3xl font-bold text-primary">{log.criticalAlerts}</div>

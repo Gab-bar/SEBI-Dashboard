@@ -64,7 +64,7 @@ export default function RiskHeatmap() {
   ];
   return (
     <div className="glass-card overflow-hidden">
-      <div className="px-6 py-5 border-b border-primary/[0.06] flex items-center justify-between">
+      <div className="px-6 py-5 border-b border-primary/[0.06] flex flex-col sm:flex-row sm:justify-between gap-4">
         <h3 className="text-lg font-semibold text-txt-primary">Risk Heatmap</h3>
         <div className="flex gap-3">
           <select className="px-4 py-2 bg-white border border-primary/[0.08] rounded-lg text-sm font-medium text-txt-primary">

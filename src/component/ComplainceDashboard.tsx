@@ -76,16 +76,16 @@ const ComplianceDashboard: React.FC = () => {
   return (
     <div className="space-y-8">
       {/* ================= Compliance Categories + Quick Actions ================= */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
         <div className="lg:col-span-2">
           <div className="stat-card">
-            <h2 className="text-2xl font-bold text-txt-primary mb-6">
+            <h2 className="text-2xl font-bold text-txt-primary mb-4 sm:mb-6">
               Compliance Categories
             </h2>
             <div className="space-y-6">
               {categories.map((category) => (
                 <div key={category.name}>
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex flex-col sm:flex-row sm:justify-between gap-4 mb-2">
                     <div>
                       <h3 className="font-semibold text-txt-primary">{category.name}</h3>
                       <p className="text-sm text-txt-muted">
@@ -149,16 +149,16 @@ const ComplianceDashboard: React.FC = () => {
 
       {/* ================= System Health Monitor Section ================= */}
       <div className="stat-card">
-        <h2 className="text-2xl font-bold text-txt-primary mb-6">
+        <h2 className="text-2xl font-bold text-txt-primary mb-4 sm:mb-6">
           System Health Monitor
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
           {systemHealth.map((system) => (
             <div
               key={system.name}
               className="border border-primary/[0.06] rounded-lg p-4 flex flex-col justify-between"
             >
-              <div className="flex justify-between items-center mb-2">
+              <div className="flex flex-col sm:flex-row sm:justify-between gap-4 mb-2">
                 <h3 className="font-semibold text-txt-primary">{system.name}</h3>
                 <span
                   className={`text-xs font-medium px-3 py-1 rounded-full ${getStatusBgColor(

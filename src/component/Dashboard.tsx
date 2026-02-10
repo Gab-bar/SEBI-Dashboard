@@ -22,9 +22,9 @@ export default function Dashboard() {
   ];
 
   return (
-        <div className="p-8">
+        <div className="p-3 sm:p-4 lg:p-6 xl:p-8">
           {/* Page Header */}
-          <div className="mb-6 flex justify-between">
+          <div className="mb-6 flex flex-col sm:flex-row sm:justify-between gap-4">
             <div>
               <h2 className="section-header-title mb-2">
                 SEBI Cybersecurity Dashboard
@@ -34,7 +34,7 @@ export default function Dashboard() {
               </p>
             </div>
 
-            <div className="flex gap-3 mt-4">
+            <div className="flex flex-wrap gap-2 sm:gap-3 mt-4">
               <select className="neu-select">
                 <option>Today</option>
                 <option>This Week</option>

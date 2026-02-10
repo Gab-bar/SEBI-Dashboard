@@ -169,7 +169,7 @@ const SecurityControlsInventory = () => {
   };
 
   return (
-    <div className="min-h-screen bg-surface-bg p-8">
+    <div className="min-h-screen bg-surface-bg p-3 sm:p-4 lg:p-6 xl:p-8">
       <div className="max-w-[1600px] mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
@@ -254,8 +254,9 @@ const SecurityControlsInventory = () => {
 
         {/* Table */}
         <div className="glass-card border border-primary/[0.06] overflow-hidden">
+          <div className="overflow-x-auto">
           {/* Table Header */}
-          <div className="grid grid-cols-12 gap-4 px-6 py-4 bg-surface-bg border-b border-primary/[0.06] text-sm font-medium text-txt-secondary">
+          <div className="grid grid-cols-12 min-w-[900px] gap-4 px-6 py-4 bg-surface-bg border-b border-primary/[0.06] text-sm font-medium text-txt-secondary">
             <div className="col-span-2">Control</div>
             <div className="col-span-2">Category</div>
             <div className="col-span-1">Priority</div>
@@ -271,7 +272,7 @@ const SecurityControlsInventory = () => {
             {controls.map((control) => (
               <div
                 key={control.id}
-                className="grid grid-cols-12 gap-4 px-6 py-5 hover:bg-surface-bg transition-colors items-center"
+                className="grid grid-cols-12 min-w-[900px] gap-4 px-6 py-5 hover:bg-surface-bg transition-colors items-center"
               >
                 {/* Control */}
                 <div className="col-span-2">
@@ -339,6 +340,7 @@ const SecurityControlsInventory = () => {
                 </div>
               </div>
             ))}
+          </div>
           </div>
         </div>
       </div>

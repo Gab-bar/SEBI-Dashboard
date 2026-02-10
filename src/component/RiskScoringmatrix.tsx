@@ -71,7 +71,7 @@ const RiskScoringMatrix = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white p-8">
+    <div className="min-h-screen bg-white p-3 sm:p-4 lg:p-6 xl:p-8">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <h1 className="text-2xl font-semibold text-txt-primary mb-8">

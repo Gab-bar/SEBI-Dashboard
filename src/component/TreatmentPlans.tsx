@@ -193,7 +193,7 @@ const RiskTreatmentPlans = () => {
               </div>
 
               {/* Stats */}
-              <div className="grid grid-cols-4 gap-8">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-critical">{plan.severity}</div>
                   <div className="text-xs text-txt-muted mt-1">Severity</div>

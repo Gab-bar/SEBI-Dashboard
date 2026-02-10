@@ -192,7 +192,7 @@ const GRCRiskReporting = () => {
               </div>
 
               {/* Metrics */}
-              <div className="grid grid-cols-4 gap-8 pt-6 border-t border-primary/[0.06]">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 pt-6 border-t border-primary/[0.06]">
                 {report.metrics.map((metric, idx) => (
                   <div key={idx} className="text-center">
                     <div className="section-header-title">{metric.value}</div>

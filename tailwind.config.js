@@ -6,6 +6,11 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    'tablet:translate-x-0',
+    'tablet:-translate-x-full',
+    'laptop:w-[72px]',
+  ],
   theme: {
     extend: {
       colors: {

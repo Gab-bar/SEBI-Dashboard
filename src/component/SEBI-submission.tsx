@@ -79,7 +79,7 @@ const SEBISubmissions = () => {
     }
   ];
   return (
-    <div className="min-h-screen bg-surface-bg p-8">
+    <div className="min-h-screen bg-surface-bg p-3 sm:p-4 lg:p-6 xl:p-8">
       <div className="max-w-[1600px] mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
@@ -178,7 +178,7 @@ const SEBISubmissions = () => {
                 </div>
 
                 {/* Metrics */}
-                <div className="grid grid-cols-4 gap-6 mt-6 pt-6 border-t border-primary/[0.06]">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 mt-6 pt-6 border-t border-primary/[0.06]">
                   <div className="text-center">
                     <div className="text-sm font-medium text-txt-primary mb-1">{submission.metrics.onTime.label}</div>
                     <div className="text-xs text-txt-muted mb-2">{submission.metrics.onTime.total}</div>
